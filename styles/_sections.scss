@@ -1,0 +1,50 @@
+
+
+section {
+    @include flex-center(column, flex-start);
+
+    .section-content {
+
+        margin-top: 18vh;
+
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+    
+        h1 {
+            align-self: flex-start;
+            font-size: 75px;
+            padding: 0;
+            margin: 0;
+        }
+
+        span  {
+            align-self: flex-start;
+            font-style:italic;
+            color: darkgray;
+        }
+    
+        p, h1{
+            animation: fadeIn 2.5s; 
+            color: white;
+        }
+    
+    }
+}
+
+@media (max-width: 991px ){
+    section {
+        margin: 100px 30px 100px 30px;
+    }
+}
+
+@media (min-width: 992px) {
+    section {
+        margin: 100px 300px 150px 200px;
+    
+    }
+}
+
+
+

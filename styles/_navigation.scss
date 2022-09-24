@@ -1,0 +1,66 @@
+@mixin flex-center($flex-direction, $justify-content){
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: center;
+    justify-content: $justify-content;
+}
+
+#navigation {
+    position: fixed;
+    background: #181818;
+
+    a {
+        margin: 15px 15px 15px 15px;
+        text-decoration: none;
+        color: #8D8D8D;
+        padding: 0px 10px 10px 10px;
+        border-left: 1px solid #181818;
+        border-bottom: 1px solid #181818;
+    }
+
+    a:hover {
+        color: white;
+        border-bottom: 1px solid orange;
+    }
+}
+
+@media (min-width: 992px){
+    #navigation {
+        @include flex-center(column, center);
+        width: 110px;
+        height: 100vh;
+         
+        #nav-menu {
+            @include flex-center(column, center);
+
+            animation: 0.75s ease-out 0s 1 slideInFromTop;
+        }
+    }
+}
+
+@media (max-width: 991px ) and (min-width: 768px){
+    #navigation {
+        @include flex-center(row, center);
+        width: 100vw;
+        height: 50px;
+    
+        #nav-menu {
+            @include flex-center(row, center);
+            animation: 0.5s ease-out 0s 1 slideInFromLeft;
+        }
+    }
+}
+
+@media (max-width: 767px){
+    #navigation {
+        @include flex-center(row, flex-end);
+        width: 100vw;
+        height: 50px;
+
+    
+        #nav-menu {
+            @include flex-center(row, center);
+            animation: 0.5s ease-out 0s 1 slideInFromLeft;
+        }
+    }
+}
