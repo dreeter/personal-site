@@ -5,14 +5,15 @@ section {
 
     .section-content {
 
-        margin-top: 18vh;
-
         display: flex;
         flex-direction: column;
         align-content: center;
         align-items: center;
+        margin-bottom: 30px;
+        margin-top: 30px;
     
         h1 {
+            color: #FFA500;
             align-self: flex-start;
             font-size: 75px;
             padding: 0;
@@ -20,14 +21,38 @@ section {
         }
 
         span  {
+            display: inline-block;
+            height: 50px;
             align-self: flex-start;
-            font-style:italic;
-            color: darkgray;
+
+            h4 {
+                font-style:italic;
+                font-family: cursive;
+                color: #707070;
+            }
+
         }
     
         p, h1{
-            animation: fadeIn 2.5s; 
-            color: white;
+            animation: fadeIn 7s; 
+            margin-left: 65px;
+        }
+
+        p {
+            font-size: 30px;
+            color: $mutedOrange;
+        }
+
+        .sm-left-margin {
+            margin-left: 0px;
+        }
+
+        .md-left-margin {
+            margin-left: 20px;
+        }
+
+        .lg-left-margin {
+            margin-left: 40px;
         }
     
     }
@@ -35,7 +60,7 @@ section {
 
 @media (max-width: 991px ){
     section {
-        margin: 100px 30px 100px 30px;
+        margin: 100px 60px 100px 30px;
     }
 }
 

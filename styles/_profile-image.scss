@@ -1,12 +1,15 @@
+#profile-image {
+    position: fixed;
+    z-index: 1000;
+    border-radius: 10px;
+}
+
 @media (min-width: 992px) {
 
-    img {         
-        animation: 0.5s ease-out 0s 1 slideInFromLeft;
-        position: fixed;
+    #profile-image  {         
+        animation: 0.5s ease-out 0s 1 slideInFromLeft;     
         width: 120px;
-        height: 120px;
-        z-index: 1000;
-        border-radius: 10px;
+        height: 120px;     
         margin-left: 20px;
         margin-top: 10px;
     }
@@ -16,13 +19,11 @@
 
 @media (max-width: 991px ){
 
-    img {
+    #profile-image  {
         animation: 0.5s ease-out 0s 1 slideInFromTop;
         position: fixed;
         width: 70px;
         height: 70px;
-        z-index: 10000;
-        border-radius: 10px;
         margin-left: 15px;
         margin-top: 10px;
     }

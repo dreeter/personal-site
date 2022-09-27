@@ -1,3 +1,5 @@
+@import './colorvariables';
+
 @mixin flex-center($flex-direction, $justify-content){
     display: flex;
     flex-direction: $flex-direction;
@@ -5,24 +7,38 @@
     justify-content: $justify-content;
 }
 
+
 #navigation {
     position: fixed;
     background: #181818;
+    z-index: 101;
+    @include flex-center(row, center);
 
-    a {
-        margin: 15px 15px 15px 15px;
-        text-decoration: none;
-        color: #8D8D8D;
-        padding: 0px 10px 10px 10px;
-        border-left: 1px solid #181818;
-        border-bottom: 1px solid #181818;
-    }
-
-    a:hover {
+    i {
         color: white;
-        border-bottom: 1px solid orange;
     }
+
+    #nav-menu {
+        a {
+            margin: 30px;
+            text-decoration: none;
+            color: #8D8D8D;
+            border-bottom: 1px solid $greyBackground;
+        }
+
+        .nav-link:hover {
+            color: #ffe4b3;
+            border-bottom: 1px solid $brightOrange;
+        }
+
+        i:hover {
+            color: $brightOrange;
+        }
+    }
+
+
 }
+
 
 @media (min-width: 992px){
     #navigation {
@@ -53,13 +69,17 @@
 
 @media (max-width: 767px){
     #navigation {
-        @include flex-center(row, flex-end);
+        @include flex-center(row, center);
         width: 100vw;
         height: 50px;
 
     
         #nav-menu {
-            @include flex-center(row, center);
+            margin-left: 60px;
+            a {
+                margin: 0px 8px 0px 8px;
+            }
+            @include flex-center(row, flex-end);
             animation: 0.5s ease-out 0s 1 slideInFromLeft;
         }
     }

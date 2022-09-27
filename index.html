@@ -8,77 +8,99 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div>
-      <img id="#profile-image" src="./images/derek-photo.jpeg" alt="" />
-    </div>
-
-    <nav id="navigation">
-      <div id="nav-menu">
-        <a href="#aboutSection"> About </a>
-        <a href="#projectsSection"> Projects </a>
-        <a href="#contactSection"> Contact </a>
+    <div id="side-header-panel">
+      <div>
+        <img id="profile-image" src="./images/derek-photo.jpeg" alt="" />
       </div>
-    </nav>
-    <div id="page-content">
-      <section id="aboutSection">
-        <div class="section-content">
-          <span><h3>&lt;h&gt;</h3></span>
-          <h1>Me, Myself, and I</h1>
-          <span><h3>&lt;/h&gt;</h3></span>
-          <span><h3>&lt;p&gt;</h3></span>
-          <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum."
-          </p>
-          <span><h3>&lt;/p&gt;</h3></span>
-        </div>
-      </section>
-      <section id="projectsSection">
-        <div class="section-content">
-          <span><h3>&lt;h&gt;</h3></span>
-          <h1>Me, Myself, and I</h1>
-          <span><h3>&lt;/h&gt;</h3></span>
-          <span><h3>&lt;p&gt;</h3></span>
-          <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum."
-          </p>
-          <span><h3>&lt;/p&gt;</h3></span>
-        </div>
-      </section>
 
-      <section id="contactSection">
-        <div class="section-content">
-          <span><h3>&lt;h&gt;</h3></span>
-          <h1>Me, Myself, and I</h1>
-          <span><h3>&lt;/h&gt;</h3></span>
-          <span><h3>&lt;p&gt;</h3></span>
-          <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum."
-          </p>
-          <span><h3>&lt;/p&gt;</h3></span>
+      <nav id="navigation">
+        <div id="nav-menu">
+          <a
+            href="https://www.linkedin.com/in/derek-reeter-a2272712a/"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin fa-lg"></i
+          ></a>
+          <a href="https://github.com/dreeter/" target="_blank"
+            ><i class="fa-brands fa-square-github fa-lg"></i
+          ></a>
+
+          <a class="nav-link" href="/about"> ABOUT </a>
+          <a class="nav-link" href="#projectsSection"> PROJECTS </a>
+          <a class="nav-link" href="#contactSection"> CONTACT </a>
         </div>
-      </section>
+      </nav>
     </div>
 
-    <script src="" async defer></script>
+    <div id="content-wrapper">
+      <div id="background-canvas"></div>
+      <div id="page-content">
+        <section id="aboutSection">
+          <div class="section-content">
+            <span class="sm-left-margin"><h4>&lt;html&gt;</h4></span>
+            <span class="md-left-margin"><h4>&lt;body&gt;</h4></span>
+            <span class="lg-left-margin"><h4>&lt;h&gt;</h4></span>
+            <h1>Hi,</h1>
+            <h1>I'm Derek</h1>
+            <span class="lg-left-margin"><h4>&lt;/h&gt;</h4></span>
+            <span class="lg-left-margin"><h4>&lt;p&gt;</h4></span>
+            <p>
+              I'm a developer living in Denver, Colorado. I have a background in
+              geology and software. Recently I've been having a ton of fun
+              learning Web Development and building projects. When I'm not
+              learning new programming skills you can find me hiking, camping,
+              backpacking, and unicycling poorly.
+            </p>
+            <span class="lg-left-margin"><h4>&lt;/p&gt;</h4></span>
+          </div>
+        </section>
+        <!-- <section id="projectsSection">
+          <div class="section-content">
+            <span><h3>&lt;h&gt;</h3></span>
+            <h1>Me, Myself, and I</h1>
+            <span><h3>&lt;/h&gt;</h3></span>
+            <span><h3>&lt;p&gt;</h3></span>
+            <p>
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </p>
+            <span><h3>&lt;/p&gt;</h3></span>
+          </div>
+        </section>
+
+        <section id="contactSection">
+          <div class="section-content">
+            <span><h3>&lt;h&gt;</h3></span>
+            <h1>Me, Myself, and I</h1>
+            <span><h3>&lt;/h&gt;</h3></span>
+            <span><h3>&lt;p&gt;</h3></span>
+            <p>
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </p>
+            <span><h3>&lt;/p&gt;</h3></span>
+          </div>
+        </section> -->
+      </div>
+    </div>
+
+    <script type="module" src="./js/index.js" async defer></script>
   </body>
 </html>

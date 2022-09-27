@@ -1,19 +1,44 @@
 @import './animations';
+@import './colorvariables';
 @import './navigation';
 @import './profile-image';
 @import './sections';
+@import "./scss/fontawesome.scss";
+@import "./scss/solid.scss";
+@import "./scss/brands.scss";
+@import "./scss/regular.scss";
+
 
 body {
     margin: 0;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+}
+
+#side-header-panel {
     display: flex;
-    background: #1D1D1D !important;
 }
 
 
+#content-wrapper{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
 
+#page-content {
+    margin-top: -10vh;
+    position: relative;
+    z-index: 100;
+}
 
+#background-canvas {
+    color: #1D1D1D;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -100;
 
-
-
-
+}
 
