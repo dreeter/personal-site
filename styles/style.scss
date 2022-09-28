@@ -28,6 +28,8 @@ body {
 }
 
 #page-content {
+    display: flex;
+    flex-direction: column;
     margin-top: -10vh;
     position: relative;
     z-index: 100;

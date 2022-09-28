@@ -5,12 +5,92 @@ section {
 
     .section-content {
 
+        width: 100%;
         display: flex;
         flex-direction: column;
-        align-content: center;
-        align-items: center;
+        align-content: flex-start;
+        align-items: flex-start;
         margin-bottom: 30px;
         margin-top: 30px;
+
+        form {
+            margin-left: 65px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 50vw;
+            min-width: 360px;
+            height: 400px;
+
+            ::placeholder {
+                color: $mutedOrange;
+                font-family: 'Rajdhani', sans-serif;
+            }
+
+            input, textarea {
+                margin: 5px 0px 5px 5px;
+                background-color: #1D1D1D;
+                border-style: none; 
+                font-size: medium;   
+                text-indent: 7px;
+                color: $mutedOrange;
+                font-family: 'Rajdhani', sans-serif;
+                font-size: large;
+            }
+
+            #contactInfo {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                height: 20%;
+
+                input {
+                    width: 50%;
+                    min-width: 162px;
+                }
+            }
+
+            #messageInfo {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 80%;
+
+                input {
+                    height: 22%;
+                    min-width: 337px;
+                }
+
+                textarea {
+                    height: 80%;
+                    min-width: 337px;
+                    resize: none;
+                }
+
+            }
+
+            button {
+                margin-top: 5px;
+                align-self: flex-end;
+                height: 15%;
+                width: 15%;
+                min-width: 120px;
+                border-color: $brightOrange;
+                background-color: #1D1D1D;
+                color: $brightOrange;
+                font-size: large;
+            }
+
+            button:hover {
+                background-color: $brightOrange;
+                color: #1D1D1D;
+                border-color: #1D1D1D;
+            }
+
+
+        }
+
+
     
         h1 {
             color: #FFA500;
@@ -21,6 +101,7 @@ section {
         }
 
         span  {
+            animation: 0.5s ease-out 0s 1 slideInFromLeft;
             display: inline-block;
             height: 50px;
             align-self: flex-start;
@@ -33,9 +114,10 @@ section {
 
         }
     
-        p, h1{
+        p, h1 {
             animation: fadeIn 7s; 
             margin-left: 65px;
+           
         }
 
         p {

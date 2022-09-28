@@ -164,12 +164,85 @@ section {
   justify-content: flex-start;
 }
 section .section-content {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-content: center;
-  align-items: center;
+  align-content: flex-start;
+  align-items: flex-start;
   margin-bottom: 30px;
   margin-top: 30px;
+}
+section .section-content form {
+  margin-left: 65px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50vw;
+  min-width: 360px;
+  height: 400px;
+}
+section .section-content form ::-moz-placeholder {
+  color: #ffe4b3;
+  font-family: "Rajdhani", sans-serif;
+}
+section .section-content form :-ms-input-placeholder {
+  color: #ffe4b3;
+  font-family: "Rajdhani", sans-serif;
+}
+section .section-content form ::placeholder {
+  color: #ffe4b3;
+  font-family: "Rajdhani", sans-serif;
+}
+section .section-content form input, section .section-content form textarea {
+  margin: 5px 0px 5px 5px;
+  background-color: #1D1D1D;
+  border-style: none;
+  font-size: medium;
+  text-indent: 7px;
+  color: #ffe4b3;
+  font-family: "Rajdhani", sans-serif;
+  font-size: large;
+}
+section .section-content form #contactInfo {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 20%;
+}
+section .section-content form #contactInfo input {
+  width: 50%;
+  min-width: 162px;
+}
+section .section-content form #messageInfo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 80%;
+}
+section .section-content form #messageInfo input {
+  height: 22%;
+  min-width: 337px;
+}
+section .section-content form #messageInfo textarea {
+  height: 80%;
+  min-width: 337px;
+  resize: none;
+}
+section .section-content form button {
+  margin-top: 5px;
+  align-self: flex-end;
+  height: 15%;
+  width: 15%;
+  min-width: 120px;
+  border-color: #FFA500;
+  background-color: #1D1D1D;
+  color: #FFA500;
+  font-size: large;
+}
+section .section-content form button:hover {
+  background-color: #FFA500;
+  color: #1D1D1D;
+  border-color: #1D1D1D;
 }
 section .section-content h1 {
   color: #FFA500;
@@ -179,6 +252,8 @@ section .section-content h1 {
   margin: 0;
 }
 section .section-content span {
+  -webkit-animation: 0.5s ease-out 0s 1 slideInFromLeft;
+          animation: 0.5s ease-out 0s 1 slideInFromLeft;
   display: inline-block;
   height: 50px;
   align-self: flex-start;
@@ -10652,6 +10727,8 @@ body {
 }
 
 #page-content {
+  display: flex;
+  flex-direction: column;
   margin-top: -10vh;
   position: relative;
   z-index: 100;
