@@ -1,4 +1,3 @@
-@import './colorvariables';
 
 @mixin flex-center($flex-direction, $justify-content){
     display: flex;
@@ -10,7 +9,7 @@
 
 #navigation {
     position: fixed;
-    background: #181818;
+    background: $greyBackground;
     z-index: 101;
     @include flex-center(row, center);
 
@@ -22,12 +21,12 @@
         a {
             margin: 30px;
             text-decoration: none;
-            color: #8D8D8D;
+            color: $greylinks;
             border-bottom: 1px solid $greyBackground;
         }
 
         .nav-link:hover {
-            color: #ffe4b3;
+            color: $mutedOrange;
             border-bottom: 1px solid $brightOrange;
         }
 

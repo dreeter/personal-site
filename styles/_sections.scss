@@ -6,18 +6,14 @@ section {
     .section-content {
 
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-content: flex-start;
-        align-items: flex-start;
-        // margin-bottom: 30px;
-        // margin-top: 30px;
+        @include flex-center(column, flex-start);
+
 
         form {
-            margin-left: 65px;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-self: flex-start;
+            margin-left: 65px;
             width: 50vw;
             min-width: 360px;
             height: 400px;
@@ -29,7 +25,7 @@ section {
 
             input, textarea {
                 margin: 5px 0px 5px 5px;
-                background-color: #1D1D1D;
+                background-color: $darkCanvas;
                 border-style: none; 
                 font-size: medium;   
                 text-indent: 7px;
@@ -41,7 +37,6 @@ section {
             #contactInfo {
                 display: flex;
                 flex-direction: row;
-                width: 100%;
                 height: 20%;
 
                 input {
@@ -53,7 +48,6 @@ section {
             #messageInfo {
                 display: flex;
                 flex-direction: column;
-                width: 100%;
                 height: 80%;
 
                 input {
@@ -76,14 +70,14 @@ section {
                 width: 15%;
                 min-width: 120px;
                 border-color: $brightOrange;
-                background-color: #1D1D1D;
+                background-color: $darkCanvas;
                 color: $brightOrange;
                 font-size: large;
             }
 
             button:hover {
                 background-color: $brightOrange;
-                color: #1D1D1D;
+                color: $darkCanvas;
                 border-color: $brightOrange;
             }
 
@@ -92,21 +86,17 @@ section {
 
 
         #project-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            align-content: center;
+            @include flex-center(column, center);
+
             margin-left: 65px;
 
             .project {
+                @include flex-center(row, center);
+                margin: 30px;
 
-                margin: 10px;
-                display: flex;
-                flex: row;
-                align-items: center;
-                align-content: center;
 
                 img {
+                    flex-shrink: 2;
                     width: 20vw;
                     height: 20vw;
                     border-radius: 5px;
@@ -115,16 +105,15 @@ section {
                 }
 
                 img:hover {
-                    height: 19vw;
-                    width: 19vw;
+                    height: 18vw;
+                    width: 18vw;
                 }
 
                 p {
-                    margin-top: 5%;
-                    width: 40vw;
-                    height: 20vw;
-                    font-size: small;
+                    flex-shrink: 1;
+                    font-size: 15px;
                 }
+
 
             }
         }
@@ -132,7 +121,7 @@ section {
 
     
         h1 {
-            color: #FFA500;
+            color: $brightOrange;
             align-self: flex-start;
             font-size: 75px;
             padding: 0;
@@ -144,11 +133,12 @@ section {
             display: inline-block;
             height: 50px;
             align-self: flex-start;
+            margin: 0;
 
             h4 {
                 font-style:italic;
                 font-family: cursive;
-                color: #707070;
+                color: $lightgrey;
             }
 
         }
@@ -185,16 +175,23 @@ section {
 
 @media (max-width: 991px ){
     section {
-        margin: 100px 60px 100px 20px;
-        // margin: 25% 10% 10% 5%;
-        
+        margin: 100px 60px 100px 20px;         
     }
+
+    
 }
 
 @media (min-width: 992px) {
     section {
         margin: 100px 100px 150px 200px;
-        // margin: 5% 15% 20% 10%;
+
+        #project-content {
+            p {
+                flex-shrink: 1;
+                font-size: 20px !important;
+            }
+        }
+
     
     }
 }

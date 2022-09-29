@@ -30,13 +30,19 @@ body {
 #page-content {
     display: flex;
     flex-direction: column;
-    margin-top: -10vh;
+    margin-top: 30px;
     position: relative;
     z-index: 100;
+
+    hr {
+        align-content: flex-start;
+        border: thin solid $darkOrange;
+        width: 400px;
+    }
 }
 
 #background-canvas {
-    color: #1D1D1D;
+    color: $darkCanvas;
     position: fixed;
     top: 0;
     left: 0;

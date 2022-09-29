@@ -32,9 +32,9 @@
             ><i class="fa-brands fa-square-github fa-lg"></i
           ></a>
 
-          <a id="aboutLink" class="nav-link" href="#aboutSection"> ABOUT </a>
-          <a class="nav-link" href="#projectsSection"> PROJECTS </a>
-          <a class="nav-link" href="#contactSection"> CONTACT </a>
+          <a id="aboutLink" class="nav-link" href="#about"> ABOUT </a>
+          <a class="nav-link" href="#projects"> PROJECTS </a>
+          <a class="nav-link" href="#contact"> CONTACT </a>
         </div>
       </nav>
     </div>
@@ -42,7 +42,7 @@
     <div id="content-wrapper">
       <div id="background-canvas"></div>
       <div id="page-content">
-        <section id="aboutSection">
+        <section id="about">
           <div class="section-content">
             <span class="sm-left-margin"><h4>&lt;html&gt;</h4></span>
             <span class="md-left-margin"><h4>&lt;body&gt;</h4></span>
@@ -53,15 +53,16 @@
             <span class="lg-left-margin"><h4>&lt;p&gt;</h4></span>
             <p>
               I'm a developer living in Denver, Colorado. I have a background in
-              geology and software. Recently I've been having a ton of fun
+              geology and software. Lately, I've been having a ton of fun
               learning Web Development and building projects. When I'm not
-              learning new programming skills you can find me hiking, camping,
-              backpacking, and unicycling poorly.
+              learning new skills you can find me hiking, camping, backpacking,
+              and unicycling.
             </p>
             <span class="lg-left-margin"><h4>&lt;/p&gt;</h4></span>
           </div>
         </section>
-        <section id="projectsSection">
+        <hr />
+        <section id="projects">
           <div class="section-content">
             <span class="lg-left-margin"><h4>&lt;section&gt;</h4></span>
             <span class="xl-left-margin"><h4>&lt;h&gt;</h4></span>
@@ -71,28 +72,62 @@
 
             <div id="project-content">
               <div class="project">
-                <img src="./images/chess.png" alt="" />
+                <a href="https://github.com/dreeter/chess" target="_blank">
+                  <img src="./images/chess.png" alt="Chess project image" />
+                </a>
                 <p>
-                  Chess: A non-reactive browser based implementation of the
-                  classic game Chess using HTML, CSS, JavaScript, and a little
-                  jQuery.
+                  Chess: A browser based implementation of the classic game
+                  Chess using HTML, CSS, JavaScript, and a little jQuery.
+                  Nothing fancy, but a great learning experience.
                 </p>
               </div>
               <div class="project">
-                <img class="hover-big" src="./images/geostat-org.png" alt="" />
+                <a href="https://github.com/dreeter/geostat" target="_blank">
+                  <img
+                    class="hover-big"
+                    src="./images/geostat-org.png"
+                    alt="GeoStat project image"
+                  />
+                </a>
                 <p>
                   GeoStat: A reactive web-app granting geolocation based
                   searches for current weather and geology using HTML, CSS,
-                  Bootstrap, JavaScript, NodeJS, and the OpenWeather and
+                  Bootstrap, JavaScript, NodeJS/Express, and the OpenWeather and
                   Macrostrat APIs.
                 </p>
               </div>
               <div class="project">
-                <img src="./images/geostat-ang.png" alt="" />
+                <a
+                  href="https://github.com/dreeter/angular-geostat"
+                  target="_blank"
+                >
+                  <img
+                    src="./images/geostat-ang.png"
+                    alt="Angular GeoStat project image"
+                  />
+                </a>
                 <p>
-                  GeoStat: An re-implementation and expansion of the original
-                  GeoStat project built with Angular. Location-based weather,
-                  geology, and weather forecasts.
+                  GeoStat: A re-implementation and expansion of the original
+                  GeoStat project built with Angular, NodeJs/Express, HTML, CSS,
+                  and Bootstrap. Location-based weather, geology, and weather
+                  forecasts with ngx-echarts.
+                </p>
+              </div>
+              <div class="project">
+                <a
+                  href="https://github.com/dreeter/personal-site"
+                  target="_blank"
+                >
+                  <img
+                    src="./images/personal-website.png"
+                    alt="Derek's website image"
+                  />
+                </a>
+                <p>
+                  My personal website. Wait... that's where you are right now.
+                  This website is HTML, SCSS, vanilla JavaScript, with a small
+                  NodeJS/Express backend. The dynamic background canvas is
+                  THREE.js.
                 </p>
               </div>
             </div>
@@ -100,19 +135,21 @@
             <span class="lg-left-margin"><h4>&lt;/section&gt;</h4></span>
           </div>
         </section>
-        <section id="contactSection">
+        <hr />
+        <section id="contact">
           <div class="section-content">
             <span class="lg-left-margin"><h4>&lt;h&gt;</h4></span>
             <h1>Contact Me</h1>
             <span class="lg-left-margin"><h4>&lt;/h&gt;</h4></span>
             <span class="lg-left-margin"><h4>&lt;form&gt;</h4></span>
-            <form action="">
+            <form action="" autocomplete="off">
               <div id="contactInfo">
                 <input
                   id="nameInput"
                   type="text"
                   name="nameInput"
                   placeholder="Name"
+                  autocomplete="off"
                 />
 
                 <input
@@ -120,6 +157,7 @@
                   type="text"
                   name="emailInput"
                   placeholder="Email"
+                  autocomplete="off"
                 />
               </div>
 
@@ -129,12 +167,14 @@
                   type="text"
                   name="subjectInput"
                   placeholder="Subject"
+                  autocomplete="off"
                 />
 
                 <textarea
                   name=""
                   id="messageTextArea"
                   placeholder="Message"
+                  autocomplete="off"
                 ></textarea>
               </div>
 
