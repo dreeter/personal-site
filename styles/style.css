@@ -134,6 +134,7 @@
   position: fixed;
   z-index: 1000;
   border-radius: 10px;
+  border: 1px solid #FFA500;
 }
 
 @media (min-width: 992px) {
@@ -169,8 +170,6 @@ section .section-content {
   flex-direction: column;
   align-content: flex-start;
   align-items: flex-start;
-  margin-bottom: 30px;
-  margin-top: 30px;
 }
 section .section-content form {
   margin-left: 65px;
@@ -242,7 +241,37 @@ section .section-content form button {
 section .section-content form button:hover {
   background-color: #FFA500;
   color: #1D1D1D;
-  border-color: #1D1D1D;
+  border-color: #FFA500;
+}
+section .section-content #project-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  margin-left: 65px;
+}
+section .section-content #project-content .project {
+  margin: 10px;
+  display: flex;
+  flex: row;
+  align-items: center;
+  align-content: center;
+}
+section .section-content #project-content .project img {
+  width: 20vw;
+  height: 20vw;
+  border-radius: 5px;
+  border: 1px solid #FFA500;
+}
+section .section-content #project-content .project img:hover {
+  height: 19vw;
+  width: 19vw;
+}
+section .section-content #project-content .project p {
+  margin-top: 5%;
+  width: 40vw;
+  height: 20vw;
+  font-size: small;
 }
 section .section-content h1 {
   color: #FFA500;
@@ -281,15 +310,18 @@ section .section-content .md-left-margin {
 section .section-content .lg-left-margin {
   margin-left: 40px;
 }
+section .section-content .xl-left-margin {
+  margin-left: 60px;
+}
 
 @media (max-width: 991px) {
   section {
-    margin: 100px 60px 100px 30px;
+    margin: 100px 60px 100px 20px;
   }
 }
 @media (min-width: 992px) {
   section {
-    margin: 100px 300px 150px 200px;
+    margin: 100px 100px 150px 200px;
   }
 }
 /*!

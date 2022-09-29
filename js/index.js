@@ -29,9 +29,11 @@ function init() {
     container.appendChild( renderer.domElement );
 }
 
-document.getElementById('about-anchor').addEventListener('click', ()=>{
-    camera.position.z = 1.5;
-});
+// document.getElementById('aboutLink').addEventListener('click', ()=>{
+//     console.log("Hello!");
+//     camera.position.z = 2;
+//     renderer.render(scene, camera)
+// });
 
 
 function animate() {
