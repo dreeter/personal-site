@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="side-header-panel">
+      <div>
+        <img id="profile-image" src="./images/derek-photo.jpeg" alt="" />
+      </div>
+
+      <nav id="navigation">
+        <div id="nav-menu">
+          <a
+            href="https://www.linkedin.com/in/derek-reeter-a2272712a/"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin fa-lg"></i
+          ></a>
+          <a href="https://github.com/dreeter/" target="_blank"
+            ><i class="fa-brands fa-square-github fa-lg"></i
+          ></a>
+
+          <a id="aboutLink" class="nav-link" href="#about"> ABOUT </a>
+          <a class="nav-link" href="#projects"> PROJECTS </a>
+          <a class="nav-link" href="#contact"> CONTACT </a>
+        </div>
+      </nav>
+    </div>
+
+    <div id="content-wrapper">
+      <div id="background-canvas"></div>
+      <div id="page-content">
+        <section id="about">
+          <div class="section-content">
+            <span class="sm-left-margin"><h4>&lt;html&gt;</h4></span>
+            <span class="md-left-margin"><h4>&lt;body&gt;</h4></span>
+            <span class="lg-left-margin"><h4>&lt;h&gt;</h4></span>
+            <h1>Hi,</h1>
+            <h1>I'm Derek</h1>
+            <span class="lg-left-margin"><h4>&lt;/h&gt;</h4></span>
+            <span class="lg-left-margin"><h4>&lt;p&gt;</h4></span>
+            <p>
+              I'm a developer living in Denver, Colorado. I have a background in
+              geology and software. Lately, I've been having a ton of fun
+              learning Web Development and building projects. When I'm not
+              learning new skills you can find me hiking, camping, backpacking,
+              and unicycling.
+            </p>
+            <span class="lg-left-margin"><h4>&lt;/p&gt;</h4></span>
+          </div>
+        </section>
+        <hr />
+        <section id="projects">
+          <div class="section-content">
+            <span class="lg-left-margin"><h4>&lt;section&gt;</h4></span>
+            <span class="xl-left-margin"><h4>&lt;h&gt;</h4></span>
+            <h1>Projects</h1>
+            <span class="xl-left-margin"><h4>&lt;/h&gt;</h4></span>
+            <span class="xl-left-margin"><h4>&lt;div&gt;</h4></span>
+
+            <div id="project-content">
+              <div class="project">
+                <a href="https://github.com/dreeter/chess" target="_blank">
+                  <img src="./images/chess.png" alt="Chess project image" />
+                </a>
+                <p>
+                  Chess: A browser based implementation of the classic game
+                  Chess using HTML, CSS, JavaScript, and a little jQuery.
+                  Nothing fancy, but a great learning experience.
+                </p>
+              </div>
+              <div class="project">
+                <a href="https://github.com/dreeter/geostat" target="_blank">
+                  <img
+                    class="hover-big"
+                    src="./images/geostat-org.png"
+                    alt="GeoStat project image"
+                  />
+                </a>
+                <p>
+                  GeoStat: A reactive web-app granting geolocation based
+                  searches for current weather and geology using HTML, CSS,
+                  Bootstrap, JavaScript, NodeJS/Express, and the OpenWeather and
+                  Macrostrat APIs.
+                </p>
+              </div>
+              <div class="project">
+                <a
+                  href="https://github.com/dreeter/angular-geostat"
+                  target="_blank"
+                >
+                  <img
+                    src="./images/geostat-ang.png"
+                    alt="Angular GeoStat project image"
+                  />
+                </a>
+                <p>
+                  GeoStat: A re-implementation and expansion of the original
+                  GeoStat project built with Angular, NodeJs/Express, HTML, CSS,
+                  and Bootstrap. Location-based weather, geology, and weather
+                  forecasts with ngx-echarts.
+                </p>
+              </div>
+              <div class="project">
+                <a
+                  href="https://github.com/dreeter/personal-site"
+                  target="_blank"
+                >
+                  <img
+                    src="./images/personal-website.png"
+                    alt="Derek's website image"
+                  />
+                </a>
+                <p>
+                  My personal website. Wait... that's where you are right now.
+                  This website is HTML, SCSS, vanilla JavaScript, with a small
+                  NodeJS/Express backend. The dynamic background canvas is
+                  THREE.js.
+                </p>
+              </div>
+            </div>
+            <span class="xl-left-margin"><h4>&lt;/div&gt;</h4></span>
+            <span class="lg-left-margin"><h4>&lt;/section&gt;</h4></span>
+          </div>
+        </section>
+        <hr />
+        <section id="contact">
+          <div class="section-content">
+            <span class="lg-left-margin"><h4>&lt;h&gt;</h4></span>
+            <h1>Contact Me</h1>
+            <span class="lg-left-margin"><h4>&lt;/h&gt;</h4></span>
+            <span class="lg-left-margin"><h4>&lt;form&gt;</h4></span>
+            <form id="messageForm" autocomplete="off">
+              <div id="contactInfo">
+                <input
+                  id="nameInput"
+                  type="text"
+                  name="nameInput"
+                  required
+                  placeholder="Name"
+                  autocomplete="off"
+                />
+
+                <input
+                  id="emailInput"
+                  type="text"
+                  name="emailInput"
+                  required
+                  placeholder="Email"
+                  autocomplete="off"
+                  pattern="[^@\s]+@[^@\s]+"
+                />
+              </div>
+
+              <div id="messageInfo">
+                <input
+                  id="subjectInput"
+                  type="text"
+                  name="subjectInput"
+                  required
+                  placeholder="Subject"
+                  autocomplete="off"
+                />
+
+                <textarea
+                  name="messageTextArea"
+                  id="messageTextArea"
+                  required
+                  placeholder="Message"
+                  autocomplete="off"
+                ></textarea>
+              </div>
+              <button id="messageSubmitButton" type="submit">Send!</button>
+            </form>
+            <span><p id="submissionMessage"></p></span>
+            <span class="lg-left-margin"><h4>&lt;/form&gt;</h4></span>
+            <span class="md-left-margin"><h4>&lt;/body&gt;</h4></span>
+            <span class="sm-left-margin"><h4>&lt;/html&gt;</h4></span>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script type="module" src="./js/index.js" async defer></script>
+  </body>
+</html>
