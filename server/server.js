@@ -1,6 +1,8 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const nodeMailer = require('nodemailer');
+require('dotenv').config();
+
+console.log(process.env);
 
 const app = express();
 
@@ -10,8 +12,8 @@ const port = process.env.PORT || 3000;
 
 app.use(express.static('client'));
 
-app.listen(process.env.PORT || 3000, ()=> {
-    console.log('App listening on port ' + port);
+app.listen(port, ()=> {
+    console.log('Server Running at port ' + port);
 });
 
 app.post("/message", (req, res)=> {
@@ -20,7 +22,7 @@ app.post("/message", (req, res)=> {
         service: "gmail",
         auth: {
             user: "dreeter00@gmail.com",
-            pass: 'app-passwordhere'
+            pass: process.env.MAIL_PASS
         }
     })
 

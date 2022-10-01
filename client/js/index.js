@@ -1,12 +1,54 @@
 import * as THREE from './three.module.js';
 
-
 let camera, scene, renderer;
 let geometry, material, mesh;
-let changeRate = 0;
-init();
-animate();
-function init() {
+
+canvasInit();
+animateCanvas();
+document.getElementById('messageForm').addEventListener('submit', submitEmailMessage);
+
+async function submitEmailMessage(event) {
+
+    event.preventDefault();
+
+    const name = document.getElementById('nameInput');
+    const email = document.getElementById('emailInput');
+    const subject = document.getElementById('subjectInput');
+    const message = document.getElementById('messageTextArea');
+    
+    const submission = {
+        name: name.value,
+        email: email.value,
+        subject: subject.value,
+        message: message.value
+    }
+
+    fetch('/message', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(submission)
+    }).then((response)=> {
+
+        if(response.status === 200){
+            console.log("message was sent!");
+            document.getElementById('submissionMessage').textContent = 'Thanks. Message Sent!'
+        } else {
+            console.log("message send failed!");
+            document.getElementById('submissionMessage').textContent = 'Message Failed. How embarassing!'
+        }
+
+    }).catch((error)=>{})
+
+    name.value = '';
+    email.value = '';
+    subject.value = '';
+    message.value = '';
+}
+
+function canvasInit() {
+
     camera = new THREE.PerspectiveCamera( 20, (window.innerWidth / window.innerHeight), 0.01, 100 );
     camera.position.z = 1.5;
     scene = new THREE.Scene();
@@ -29,43 +71,13 @@ function init() {
     container.appendChild( renderer.domElement );
 }
 
-function animate() {
-    requestAnimationFrame( animate );
+function animateCanvas() {
+    requestAnimationFrame( animateCanvas );
     mesh.rotation.x += 0.00015;
     mesh.rotation.y += 0.00015;
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.render( scene, camera)
 }
 
-document.getElementById('messageForm').addEventListener('submit', async (event)=>{
 
-    event.preventDefault();
-
-    const submission = {
-        name: document.getElementById('nameInput').value,
-        email: document.getElementById('emailInput').value,
-        subject: document.getElementById('subjectInput').value,
-        message: document.getElementById('messageTextArea').value
-    }
-
-    fetch('http://localhost:3000/message', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(submission)
-    }).then((response)=> {
-        document.getElementById('submissionMessage').textContent = 'Message Sent!'
-    }).catch((error)=>{
-        document.getElementById('submissionMessage').textContent = 'Message Failed. How embarassing!'
-    })
-
-    document.getElementById('nameInput').value = '';
-    document.getElementById('emailInput').value = '';
-    document.getElementById('subjectInput').value = '';
-    document.getElementById('messageTextArea').value = '';
-
-
-
-});
   
