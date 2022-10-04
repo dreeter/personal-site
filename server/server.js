@@ -2,8 +2,6 @@ const express = require('express');
 const nodeMailer = require('nodemailer');
 require('dotenv').config();
 
-console.log(process.env);
-
 const app = express();
 
 app.use(express.json());
