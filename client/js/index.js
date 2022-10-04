@@ -32,10 +32,8 @@ async function submitEmailMessage(event) {
     }).then((response)=> {
 
         if(response.status === 200){
-            console.log("message was sent!");
             document.getElementById('submissionMessage').textContent = 'Thanks. Message Sent!'
         } else {
-            console.log("message send failed!");
             document.getElementById('submissionMessage').textContent = 'Message Failed. How embarassing!'
         }
 
@@ -67,7 +65,6 @@ function canvasInit() {
     renderer = new THREE.WebGLRenderer();
     renderer.setClearColor('#111111');
     const container = document.getElementById('background-canvas');
-    console.log(container);
     container.appendChild( renderer.domElement );
 }
 

@@ -13,7 +13,6 @@ const port = process.env.PORT || 3000;
 app.use(express.static('client'));
 
 app.listen(port, ()=> {
-    console.log('Server Running at port ' + port);
 });
 
 app.post("/message", (req, res)=> {
